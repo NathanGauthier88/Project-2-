@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Review Index Page </title>
+</head>
+<body>
+    <h1> Brew Review </h1>
+    <a href="/reviews/new">Add your own review!</a>
+    
+    <div>
+        <% allReviews.forEach(review => { %> 
+            <p>
+                <%= review.user %>
+            </p>
+
+            <p>
+                <%= review.location %>
+            </p>
+
+       
+            <a href="/reviews/<%= review._id %>">
+                <img src="<%= review.img %>" class="img-size img-border" alt="<%= review.name %>">
+            </a>
+
+           
+
+            <p>
+                <%= review.brewery %>
+            </p>
+
+            <p>
+                <%= review.name %>
+            </p>
+
+            <p>
+                <%= review.style %>
+            </p>
+
+            <p>
+                <%= review.abv %>
+            </p>
+
+            <p>
+                <%= review.reviewBody %>
+            </p>
+
+            <p>
+                <%= review.score %>
+            </p>
+
+            <a href="/reviews/<%= review._id %>/edit">Edit</a>
+
+        
+         <% }) %>
+    </div>
+</body>
+</html>

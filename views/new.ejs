@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a new review</h1>
+
+    <form action="/reviews/new" method="POST">
+    
+    <label>User</label>
+        <input type="text" name="user"/>
+       
+    <label>Location</label>
+        <input type="text" name="location"/>
+    
+    <label>Brewery</label>
+        <input type="text" name="brewery"/>
+    
+    <label>Image Link</label>
+        <input type="text" name="img"/>
+    
+    <label>Name</label>
+        <input type="text" name="name"/>
+    
+    <label>Style</label>
+        <input type="text" name="style"/>
+    
+    <label>ABV</label>
+        <input type="number" name="abv">
+    
+    <label>Review</label>
+        <textarea name="reviewBody" id="" cols="30" rows="10"></textarea>
+   
+    <label>Score</label>
+        <input type="number" name="score">
+
+
+    <input type="submit" value="Submit">
+
+    <a class="button back" href="/reviews">Back</a>
+    </form>
+</body>
+</html>
+

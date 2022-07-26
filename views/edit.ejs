@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <form action="/reviews/<%= review._id %>?_method=PUT" method="POST">
+        <label> User </label>
+            <input type="text" name="name" value= "<%= review.user %>">
+
+        <label> Location </label>
+            <input type="text" name="location" value= "<%= review.location %>">
+    
+        <label> Brewery </label>
+            <input type="text" name="brewery" value= "<%= review.brewery %>">
+
+        <label> Img </label>
+            <input type="text" name="img" value= "<%= review.img %>">
+        
+        <label> Name </label>
+            <input type="text" name="name" value= "<%= review.name %>">
+
+        <label> Style </label>
+            <input type="text" name="style" value= "<%= review.style %>">
+
+        <label> ABV </label>
+            <input type="number" name="abv" value= "<%= review.abv %>">
+        
+        <label> Review </label>
+            <input type="text" name="review" value= "<%= review.reviewBody %>">
+
+        <label> Score </label>
+            <input type="number" name="score" value= "<%= review.score %>">
+        
+       
+            
+            <input type="submit" name="submit">
+        <a class="button back" href="/reviews">Back</a>
+        </form>
+</body>
+</html>
+
