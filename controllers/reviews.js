@@ -41,23 +41,18 @@ reviewRouter.get("/new", (req, res) => {
 
 reviewRouter.delete("/:id", (req, res) => {
     Review.findByIdAndDelete(req.params.id, (error, deletedReview) => {
-        res.redirect("/reviews")
+        res.redirect("/")
     })
 })
 
 // update
 
 reviewRouter.put("/:id", (req, res) => {
-    Review.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        {
-            new: true,
-        },
-        (err, updatedProduct) => {
-            res.redirect(`/reviews/${req.params.id}`)
+    Review.findByIdAndUpdate(req.params.id, req.body, () => {
+            res.redirect('/reviews')
+
         })
-})
+    })
 
 
 //create

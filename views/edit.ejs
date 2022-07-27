@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Edit</title>
 </head>
 <body>
     <form action="/reviews/<%= review._id %>?_method=PUT" method="POST">
         <label> User </label>
-            <input type="text" name="name" value= "<%= review.user %>">
+            <input type="text" name="user" value= "<%= review.user %>">
 
         <label> Location </label>
             <input type="text" name="location" value= "<%= review.location %>">
@@ -30,15 +32,21 @@
             <input type="number" name="abv" value= "<%= review.abv %>">
         
         <label> Review </label>
-            <input type="text" name="review" value= "<%= review.reviewBody %>">
+            <input type="text" name="reviewBody" value= "<%= review.reviewBody %>">
 
         <label> Score </label>
-            <input type="number" name="score" value= "<%= review.score %>">
+            <input type="number" name="score" step="any" value= "<%= review.score %>">
         
        
             
             <input type="submit" name="submit">
-        <a class="button back" href="/reviews">Back</a>
+       
+            <button class="button">   <a class="button back" href="/reviews">Back</a> </button>
+       
+        </form>
+
+        <button class="delete is-medium"> <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="delete"> </button> 
         </form>
 </body>
 </html>

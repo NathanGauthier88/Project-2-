@@ -1,3 +1,21 @@
-body.h1 {
-    text-align: center;
+.card-image{
+    max-width: 300px;
+    max-height: 300px;
+
+}
+
+.card{
+    background-color: bisque;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    background-color: darkgoldenrod;
 }

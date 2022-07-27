@@ -4,57 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=>, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> 
+    <link rel="stylesheet" href="/style.css">
     <title>Review Index Page </title>
 </head>
-<body>
+<body class="frontPage">
     <h1> Brew Review </h1>
     <a href="/reviews/new">Add your own review!</a>
+
+
+
+    <div class="container">
     
-    <div>
         <% allReviews.forEach(review => { %> 
-            <p>
-                <%= review.user %>
-            </p>
-
-            <p>
-                <%= review.location %>
-            </p>
-
-       
-            <a href="/reviews/<%= review._id %>">
-                <img src="<%= review.img %>" class="img-size img-border" alt="<%= review.name %>">
-            </a>
-
-           
-
-            <p>
-                <%= review.brewery %>
-            </p>
-
-            <p>
-                <%= review.name %>
-            </p>
-
-            <p>
-                <%= review.style %>
-            </p>
-
-            <p>
-                <%= review.abv %>
-            </p>
-
-            <p>
-                <%= review.reviewBody %>
-            </p>
-
-            <p>
-                <%= review.score %>
-            </p>
-
-            <a href="/reviews/<%= review._id %>/edit">Edit</a>
-
+            <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <a href="/reviews/<%= review._id %>">
+                        <img src="<%= review.img %>" class="img-size img-border" alt="<%= review.name %>">
+                    </a> 
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p class="title is-4"><%= review.user %></p>
+                    <p class="title is-4"><%= review.location %></p>
+                    <p class="title is-4"><%= review.brewery %></p>
+                    <p class="title is-4"><%= review.name %></p>
+                    <p class="title is-4"><%= review.style %></p>
+                    <p class="title is-4"><%= review.abv %></p>
+                    <p class="title is-4"><%= review.reviewBody %></p>
+                    <p class="title is-4"><%= review.score %></p>
+                  </div>
+                  <button class="button">
+    
+                    <a href="/reviews/<%= review._id %>/edit">Edit</a>
         
+                    </button>
+                </div>
+              </div>
+            
          <% }) %>
-    </div>
+        </div>
 </body>
 </html>

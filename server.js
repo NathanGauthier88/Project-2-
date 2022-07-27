@@ -38,7 +38,7 @@ app.use(methodOverride('_method'));
 
 // Mount
 app.get('/', (req, res) => {
-    res.redirect('/')
+    res.redirect("/reviews")
 })
 
 
