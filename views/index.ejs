@@ -11,12 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat:ital,wght@0,100;1,500&family=Poppins:wght@100;400&family=Spectral:wght@800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8578626e35.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="frontPage">
 
 <section class="topBar">
   <h1> Brew Review </h1>
-
+  <div class="infoHeader">
+  <h3>contact</h3>
+  <h3>about us</h3>
+</div>
+  <div class="socials">
+  <a href="#" class="fa fa-instagram"></a>
+  <a href="#" class="fa fa-youtube"></a>
+  <a href="#" class="fa fa-twitter"></a>
+</div>
 </section>
 
 
@@ -71,17 +80,19 @@
                     <div class="bottomPiece2">
                     <h3>Score: <%= review.score %></h3>
                     </div>
-                  </div>
-                    <div class="bottomPiece3">
-                    <button >
+                     <div class="bottomPiece3">
+                   
                       <a href="/reviews/<%= review._id %>/edit">Edit</a>
-                    </button>
+                    
                   </div>
+                  </div>
+                 
                   </div>
                 </div>
               </div>
             
          <% }) %>
         </div>
+        <footer class="footerDisplay">  copyright &copy; all rights reserved Brew review 2022</footer>
 </body>
 </html>

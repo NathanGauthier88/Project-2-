@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="newEJS" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
-<body>
+<body class="editBody">
     <h1>Add a new review</h1>
-
-    <form action="/reviews" method="POST">
+    <div class="containerEdit">
+    <form class="cardEdit" action="/reviews" method="POST">
     
     <label>User</label>
         <input type="text" name="user"/>
@@ -39,7 +39,8 @@
    
     <label>Score</label>
         <input type="number" name="score">
-
+    
+    </div>
 
     <input type="submit" value="Submit">
 

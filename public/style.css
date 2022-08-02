@@ -24,14 +24,15 @@ html {
 
 .cardHeader{
   display:flex;
-  align-items:center;
-  justify-content: space-around;
+  /* align-items:center; */
+  /* justify-content: space-around; */
 
 
 }
 
 .middleInfo{
-  margin: 10px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .reviewText{
@@ -40,26 +41,40 @@ html {
 
 .infoBottom{
   display:flex;
-  justify-content: space-around;
   outline-width: 2px;
   outline-style: solid;
   outline-color: black;
   background-color: antiquewhite;
   margin: 5px;
+  width: 100%;
   
   
 }
 
 .bottomPiece1{
+display: flex;
  border-right: 2px solid black;
-
+ justify-content: center;
+ text-align: center;
+ padding: 5px;
+ width: 33%;
 }
 
-
+.bottomPiece2{
+  display: flex;
+ justify-content: center;
+ text-align: center;
+ padding: 5px;
+ width: 33%;
+}
 
  .bottomPiece3{
+  display: flex;
   border-left: 2px solid black;
   justify-content: center;
+  text-align: center;
+  padding: 5px;
+  width: 33%;
  }
 
 .card{
@@ -72,8 +87,7 @@ html {
     /* padding: 10px; */
     color: black;
     font-size: 15px;
-    /* text-align: center; */
-    box-shadow: 10px black;
+    box-shadow: 50px black;
     font-family: 'Poppins', sans-serif;
 
 }
@@ -100,7 +114,7 @@ body {
     background: #efe2ba;
     color: black;
     font-size: 50px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
    
  
   
@@ -108,17 +122,15 @@ body {
   }
 
   .topBar {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 5px;
     text-align:center;
-    /* background: #efe2ba; */
     color: #e98074;
     font-size: 120px;
     font-family: 'Bungee Shade', cursive;
     box-shadow: 10px 5px 5px;
-    /* outline-color: #e98074;
-    outline-width: 5px;
-    outline-style: solid; */
     position: sticky;
     top: 0;
     background-color: #efe2ba;
@@ -167,22 +179,113 @@ body {
     
 }
 
+.newBody {
+  display: flex;
+  flex-direction: column;
+  background-color: #efe2ba;
+  height: 100%;
+  
+}
+
 .newEJS{
   height:100%;
 }
+.containerEdit{
+  width:100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.containerNew{
+  width:100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 
 .cardEdit{
   display: flex;
   flex-direction: column;
   background-color: #e98074;
   width: 600px;
-  height: 400px;
-  /* Height: 600px; */ 
+  /* height: 800px; */
+  padding: 20px;
   margin: 10px;
-  /* padding: 10px; */
   color: black;
-  font-size: 15px;
-  /* text-align: center; */
+  font-size: 20px;
   box-shadow: 10px black;
   font-family: 'Poppins', sans-serif;
+
+}
+
+input,
+textarea {
+    /* width: 75%; */
+    padding: 0.75rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bottomEdit{
+  width: 600px;
+  display:flex;
+  justify-content: space-between; 
+
+}
+
+.bottomEdit *{
+  width: 40%;
+}
+
+:focus-visible {
+    outline: 1px solid black;
+}
+
+.infoHeader {
+  display: flex;
+  color: black;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  align-items: baseline;
+  justify-content: flex-start;
+  width: 300px;
+}
+
+.socials{
+  display: flex;
+  padding: 20px;
+  font-size: 20px;
+  width: 50px;
+  justify-items: right;
+}
+
+.fa-instagram{
+
+  padding: 5px;
+  color:#e98074;
+  
+}
+
+.fa-youtube{
+  padding: 5px;
+  font-size: 20px;
+  color:#e98074;
+}
+
+.fa-twitter{
+  padding: 5px;
+  font-size: 20px;
+  color:#e98074;
+}
+
+.footerDisplay{
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
 }
