@@ -1,6 +1,6 @@
 # Brew Review 
 
-A simple beer review app that allows you to post your own review.
+A simple beer review app that allows you to post your own review of beers you have tried and where you had them. 
 
 # User Stories 
 
@@ -26,18 +26,20 @@ A simple beer review app that allows you to post your own review.
 
 # Screenshots
 
-![image](/screenshot/websitescreenshot.png)
+![image]()
 
 #  Getting Started
 
-[Follow me](https://gregarious-malasada-7b6e6e.netlify.app/) to find beer
+[Follow me]() to find beer
 
 # Future Enhancements 
 
+- Allow user(s) to login and have a profile 
+
 - Add ability for users to see where the brewery is on a live map
 
-- Allow user(s), to add/save breweries for future reference
-
-- Have a box/card that shows the results neatly 
+- Allow user(s), to store reviews 
 
 - Have google maps street view show brewery
+
+- Add ability to search to for reviews by brewery name/ style/ location 
