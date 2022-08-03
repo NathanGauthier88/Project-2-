@@ -325,3 +325,6 @@ textarea {
   justify-content: space-between; 
 }
 
+label {
+  justify-content: center;
+}
