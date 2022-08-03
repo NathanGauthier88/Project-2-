@@ -28,7 +28,7 @@ A simple beer review app that allows you to post your own review of beers you ha
 
 # Screenshots
 
-[image](https://imgur.com/OuUc2ZX)
+![image](/public/project2ScreenShot.png)
 
 #  Getting Started
 
