@@ -288,4 +288,10 @@ textarea {
 .footerDisplay{
   font-family: 'Poppins', sans-serif;
   padding: 10px;
+  margin: 10px;
+}
+
+.topHolder{
+  display: flex;
+  justify-content: space-between; 
 }
