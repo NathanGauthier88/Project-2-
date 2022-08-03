@@ -10,7 +10,7 @@ const app = express();
 
 // Configure
 require('dotenv').config();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || "4005";
 
 //Connection
 const MONGO_URL = process.env.MONGO_URL;
