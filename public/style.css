@@ -193,6 +193,11 @@ body {
   
 }
 
+.backButtonNew{
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .newEJS{
   height:100%;
 }
@@ -206,8 +211,8 @@ body {
 }
 
 .containerNew{
-  width:100%;
-  height: 100%;
+  width:600px;
+  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,6 +258,13 @@ textarea {
   width: 600px;
   display:flex;
   justify-content: space-between; 
+
+}
+
+.bottomNew{
+  
+  display:flex;
+  justify-content: center; 
 
 }
 

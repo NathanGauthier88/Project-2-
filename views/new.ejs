@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
-<body class="editBody">
+<body class="newBody">
     
     <div class="containerEdit">
     <form class="cardEdit" action="/reviews" method="POST">
@@ -33,19 +33,26 @@
     
     <label>ABV</label>
         <input type="number" name="abv">
-    
+
     <label>Review</label>
-        <textarea name="reviewBody" id="" cols="30" rows="10"></textarea>
+        <input type="text" name="reviewBody"/>
+    
+    <!-- <label>Review</label>
+        <textarea name="reviewBody" id="" cols="30" rows="10"></textarea> -->
    
     <label>Score</label>
         <input type="number" max="5" name="score">
     
+        <input class="button is-outlined is-dark"  type="submit" value="Submit">     
     </div>
 
-    <input type="submit" value="Submit">
-
-    <a href="/reviews">Back</a>
+   
     </form>
+
+    
+<div class="bottomNew">
+    <a class="button is-outlined is-dark"  href="/reviews">Back</a>
+</div>
 </body>
 </html>
 

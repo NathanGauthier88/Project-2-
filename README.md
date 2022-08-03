@@ -23,14 +23,16 @@ A simple beer review app that allows you to post your own review of beers you ha
 - HTML5
 - CSS3
 - Javascript
+- Bulma 
+- Bootstrap
 
 # Screenshots
 
-![image]()
+![image](https://imgur.com/OuUc2ZX)
 
 #  Getting Started
 
-[Follow me]() to find beer
+[Click here](https://nathang-project2-brewreview.herokuapp.com/reviews) to review beer
 
 # Future Enhancements 
 
@@ -43,3 +45,5 @@ A simple beer review app that allows you to post your own review of beers you ha
 - Have google maps street view show brewery
 
 - Add ability to search to for reviews by brewery name/ style/ location 
+
+- Add ability to like and comment 
