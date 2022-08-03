@@ -38,7 +38,7 @@
             <input type="text" name="reviewBody" value= "<%= review.reviewBody %>">
 
         <label> Score </label>
-            <input type="number" name="score" step="any" value= "<%= review.score %>">
+            <input type="number" max="5" name="score" step="any" value= "<%= review.score %>">
         
        
             
@@ -48,9 +48,9 @@
           
         </form>
         <div class="bottomEdit">
-        <a class="button back" href="/reviews">Back</a> 
+        <a class="buttonBack" href="/reviews">Back</a> 
 
-        <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
+        <form class="deleteButton" action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
             <input type="submit" value="delete">
         </form>
     </div>

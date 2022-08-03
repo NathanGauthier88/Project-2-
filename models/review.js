@@ -10,7 +10,7 @@ const reviewSchema = new mongoose.Schema(
         style: String,
         abv: { type: Number, min: 0 },
         reviewBody: String,
-        score: { type: Number, min: 0 }
+        score: { type: Number, min: 0, max: 5 }
     }
 )
 

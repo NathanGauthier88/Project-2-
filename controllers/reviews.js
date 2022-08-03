@@ -25,6 +25,10 @@ reviewRouter.get("/seed", (req,res) => {
 
 //index route
 
+reviewRouter.get("/contact", (req, res) => {
+    res.render("contact.ejs");
+});
+
 reviewRouter.get('/', (req,res) =>{
     Review.find({}, (error, allReviews) => {
         res.render('index.ejs', {allReviews})
@@ -81,5 +85,8 @@ reviewRouter.get('/:id', (req, res) => {
             })
     })
 })
+
+
+
 
 module.exports = reviewRouter;
