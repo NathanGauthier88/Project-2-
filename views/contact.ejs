@@ -1,67 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <title>Document</title>
-</head>
-<body>
-    <section id="contact" class="contact">
-        <div class="container" style="color: black; ">
-  
-          <div class="section-title">
-            <h2>Contact</h2>
-            <a href="/reviews">Back</a> 
-          </div>
-  
-          <div>
-           
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.306360671777!2d-118.49764928430544!3d34.010346280617355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4d0d472d739%3A0xf380c2219e98c8b8!2sBig%20Dean&#39;s%20Ocean%20Front%20Cafe!5e0!3m2!1sen!2sus!4v1659502495158!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-  
-          <div class="row mt-5">
-            <div class="col-lg-4">
-              <div class="info">
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>Drunky McDrunkersVille USA</p>
-                </div>
-  
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>
-                    <a href="mailto:brewReview@gmail.com">brewReview@gmail.com</a>
-                  </p>
-                </div>
-  
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Phone:</h4>
-                  <p>
-                    <a href="tel:555-555-5555">Call now</a>
-                  </p>
-                </div>
-  
-                <div class="phone">
-                  <i class="bi bi-phone-vibrate"></i>
-                  <h4>Text:</h4>
-                  <p>
-                    <a href="sms:555-555-5555">Send Text Message</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<%- include('header') %>
+<section id="contact" style="display: flex; flex-direction: column;">
+  <div class="info" style="width: 600px; display: flex; justify-content:space-around; margin: 3rem auto;">
+    <div class="email">
+      <p>
+        <a class="contact-a" href="mailto:brewReview@gmail.com"> <i class="bi bi-envelope"> Email</i></a>
+      </p>
+    </div>
+    <div>
+      <p>
+        <a class="contact-a" href="tel:+1-510-555-5555"><i class="bi bi-phone"> Call</i></a>
+      </p>
+    </div>
+    <div class="phone">
+      <p>
+        <a class="contact-a" href="sms:555-555-5555"><i class="bi bi-phone-vibrate"> Text</i></a>
+      </p>
+    </div>
+  </div>
 
-</body>
-</html>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.306360671777!2d-118.49764928430544!3d34.010346280617355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2a4d0d472d739%3A0xf380c2219e98c8b8!2sBig%20Dean&#39;s%20Ocean%20Front%20Cafe!5e0!3m2!1sen!2sus!4v1659502495158!5m2!1sen!2sus"
+    width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <a class="edit-btn" style="margin: 2rem auto;" href="/reviews">Back</a>
+</section>
+<%- include('footer') %>

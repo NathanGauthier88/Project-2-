@@ -1,63 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/style.css">
-    <title>Edit</title>
-</head>
-<body class="editBody">
-    <div class="containerEdit">
-        
+<%- include('header') %>
+<div class="containerEdit">
     <form class="cardEdit" action="/reviews/<%= review._id %>?_method=PUT" method="POST">
-        
         <label> User </label>
-            <input type="text" name="user" value= "<%= review.user %>">
+        <input type="text" name="user" value="<%= review.user %>">
 
         <label> Location </label>
-            <input type="text" name="location" value= "<%= review.location %>">
-    
+        <input type="text" name="location" value="<%= review.location %>">
+
         <label> Brewery </label>
-            <input type="text" name="brewery" value= "<%= review.brewery %>">
+        <input type="text" name="brewery" value="<%= review.brewery %>">
 
         <label> Img </label>
-            <input type="text" name="img" value= "<%= review.img %>">
-        
+        <input type="text" name="img" value="<%= review.img %>">
+
         <label> Name </label>
-            <input type="text" name="name" value= "<%= review.name %>">
+        <input type="text" name="name" value="<%= review.name %>">
 
         <label> Style </label>
-            <input type="text" name="style" value= "<%= review.style %>">
+        <input type="text" name="style" value="<%= review.style %>">
 
         <label> ABV </label>
-            <input type="number" name="abv" value= "<%= review.abv %>">
-        
+        <input type="number" name="abv" value="<%= review.abv %>">
+
         <label> Review </label>
-            <input type="text" name="reviewBody" value= "<%= review.reviewBody %>">
+        <input type="text" name="reviewBody" value="<%= review.reviewBody %>">
 
         <label> Score </label>
-            <input type="number" max="5" name="score" step="any" value= "<%= review.score %>">
-        
-       
-            
-            <input type="submit" name="submit">
-       
-            
-          
-        </form>
-        <div class="bottomEdit">
-        <a class="button is-outlined is-dark"   href="/reviews">Back</a> 
+        <input type="number" max="5" name="score" step="any" value="<%= review.score %>">
 
-        <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
-            <input type="submit" class="button is-outlined is-dark" value="delete">
-        </form>
-    </div>
-    </div>
-        
+        <input type="submit" class="submit-btn"  name="submit">
+    </form>
+    <a class="edit-btn" style="margin: 1rem auto;" href="/reviews">Back</a>
+</div>
 
-        
-</body>
-</html>
-
+<%- include('footer') %>

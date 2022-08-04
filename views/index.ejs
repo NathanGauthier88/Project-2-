@@ -1,99 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> 
-    <link rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat:ital,wght@0,100;1,500&family=Poppins:wght@100;400&family=Spectral:wght@800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/8578626e35.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body class="frontPage">
-
-<section class="topBar">
-  <h1> Brew Review </h1>
-  <div class="topHolder">
-  <div class="infoHeader">
- <a href="/reviews/contact">Contact Us</a>
-</div>
-  <div class="socials">
-  <a href="#" class="fa fa-instagram"></a>
-  <a href="#" class="fa fa-youtube"></a>
-  <a href="#" class="fa fa-twitter"></a>
-</div>
-</div>
+<%- include('header') %>
+<h2>Drink beer. Rate and review. Share.</h2>
+<a class="index-a" href="/reviews/new">Add your own review!</a>
+<section>
+  <% allReviews.forEach(review => { %>
+  <div class="card-idx">
+    <div>
+      <h1 class="user"><%= review.user %> is having...</h1>
+      <h2 class="title"><%= review.name %></h2>
+      <a href="/reviews/<%= review._id %>">
+        <img src="<%= review.img %>" class="img-size img-border" alt="<%= review.name %>">
+      </a>
+    </div>
+    <div class="idx-bottom">
+      <a class="edit-btn" href="/reviews/<%= review._id %>">More</a>
+      <a class="edit-btn" href="/reviews/<%= review._id %>/edit">Edit</a>
+      <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
+        <input class="delete-btn" type="submit" value="Delete">
+      </form>
+    </div>
+  </div>
+  </div>
+  <% }) %>
 </section>
-
-
-  <section class="header">
-
-
-    <h2>Drink beer. Rate and review. Share.</h2> 
-    
-
-</section>
-
-<section class="reviewAdder">
-
-<a class="button is-danger is-outlined" class="button is-large" href="/reviews/new">Add your own review!</a>
-
-</section>
-
-<!-- <div class="sidenav">
-  <i class="fa-solid fa-beer-mug-empty fa-xl"></i> 
-  
-</div> -->
-
-    <div class="container">
-    
-        <% allReviews.forEach(review => { %> 
-            <div class="card">
-                <div class="card-image">
-                  <figure class='image'>
-                    <a href="/reviews/<%= review._id %>">
-                        <img src="<%= review.img %>" class="img-size img-border" alt="<%= review.name %>">
-                    </a> 
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div>
-                    <div class="cardHeader">
-                    <h2 class="user"><%= review.user %> is having...</h2>
-                    <h1 class="title"><%= review.name %></h1>
-                    </div>
-                    <div class="middleInfo">
-                    <h3>Location: <%= review.location %></h3>
-                    <h3>Brewery: <%= review.brewery %></h3>
-                    <h3>Style: <%= review.style %></h3>
-                  </div>
-                  <div class="reviewText">
-                    <h2>Review: <%= review.reviewBody %></h2>
-                  </div>
-                  <div class="infoBottom">
-                    <div class="bottomPiece1">
-                    <h3>ABV%: <%= review.abv %></h3>
-                    </div>
-                    <div class="bottomPiece2">
-                    <h3>Score: <%= review.score %></h3>
-                    </div>
-                     <div class="bottomPiece3">
-                   
-                      <a href="/reviews/<%= review._id %>/edit">Edit</a>
-                    
-                  </div>
-                  </div>
-                 
-                  </div>
-                </div>
-              </div>
-            
-         <% }) %>
-        </div>
-        <footer class="footerDisplay">  copyright &copy; all rights reserved Brew Review 2022</footer>
-</body>
-</html>
+<%- include('footer') %>

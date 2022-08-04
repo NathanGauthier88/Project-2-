@@ -1,330 +1,349 @@
-*{
+* {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-  height:100%;
-}
-
-
-.user{
-  margin: 0;
-}
-
-.title{
-  margin: 0;
-}
-
-.card-image{
-  height: auto;
-  width: 600px;
-  
-} 
-
-.cardHeader{
-  display:flex;
-  align-items: flex-end;
-  /* align-items:center; */
-  justify-content: space-around;
-
-
-}
-
-.middleInfo{
-  margin: 20px;
-  padding: 10px;
-}
-
-.reviewText{
-  margin: 10px;
-}
-
-.infoBottom{
-  display:flex;
-  outline-width: 2px;
-  outline-style: solid;
-  outline-color: black;
-  background-color: antiquewhite;
-  margin: 5px;
-  width: 100%;
-  
-  
-}
-
-.bottomPiece1{
-display: flex;
- border-right: 2px solid black;
- justify-content: center;
- text-align: center;
- padding: 5px;
- width: 33%;
-}
-
-.bottomPiece2{
-  display: flex;
- justify-content: center;
- text-align: center;
- padding: 5px;
- width: 33%;
-}
-
- .bottomPiece3{
-  display: flex;
-  border-left: 2px solid black;
-  justify-content: center;
-  text-align: center;
-  padding: 5px;
-  width: 33%;
- }
-
-.card{
-    display: flex;
-    flex-direction: column;
-    background-color: #e98074;
-    width: 600px;
-    /* Height: 600px; */ 
-    margin: 10px;
-    /* padding: 10px; */
-    color: black;
-    font-size: 15px;
-    box-shadow: 50px black;
-    font-family: 'Poppins', sans-serif;
-
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #efe2ba;
-    
-    /* margin-left: 160px */
-
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
-    background-color: #efe2ba;
-}
-
-.header {
-    width: 100%;
-    padding:60px 0;
-    text-align: center;
-    background: #efe2ba;
-    color: black;
-    font-size: 50px;
-    font-family: 'Poppins', sans-serif;
-   
- 
-  
-    
-  }
-
-  .contact{
-    color: black;
-  }
-
-  .topBar {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 170px;
-    padding: 5px;
-    text-align:center;
-    color: #e98074;
-    font-size: 90px;
-    font-family: 'Bungee Shade', cursive;
-    box-shadow: 10px 5px 5px;
-    position: sticky;
-    top: 0;
-    background-color: #efe2ba;
-    z-index: 5;
-   
-  }
-
-
-  .reviewAdder {
-    text-align: center;
-    padding: 20px;
-    font-family: 'Poppins', sans-serif;
-    /* margin-left: 160px */
-  }
-
-  /* .sidenav {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color:#efe2ba;
-    overflow-x: hidden;
-    padding-top: 20px;
-    outline-color: #e98074;
-    outline-width: 5px;
-    outline-style: solid;
-  } */
-
-  /* .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    background-color: #efe2ba;
-    color: black;
-    display: block;
-
-  } */
-
-  .editBody {
-    display: flex;
-    flex-direction: column;
-    background-color: #efe2ba;
-    height: 100%;
-    
-}
-
-.newBody {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #efe2ba;
-  height: 100%;
-  
+  justify-content: center;
+  align-items: center;
+  background: #efe2ba;
 }
 
-.backButtonNew{
-  flex-direction: column;
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  box-shadow: 2px 2px 5px black;
+  background-color: #ded0a0;
+}
+
+.header-h1 {
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px slategrey;
+  text-decoration: none;
+  color: black;
+}
+
+.header-h1:hover {
+  color: rgb(44, 44, 44);
+  text-shadow: 2px 2px 2px slategrey;
+}
+
+.topHolder {
+  width: 50%;
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
 
-.newEJS{
-  height:100%;
-}
-.containerEdit{
-  width:100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.infoHeader {
+  margin-right: 1rem;
 }
 
-.containerNew{
-  width:600px;
-  height: 800px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-
-.cardEdit{
-  display: flex;
-  flex-direction: column;
-  background-color: #e98074;
-  width: 600px;
-  /* height: 800px; */
-  padding: 20px;
-  margin: 10px;
+.infoHeader>a {
+  text-decoration: none;
+  font-size: 18px;
   color: black;
-  font-size: 20px;
-  box-shadow: 10px black;
-  font-family: 'Poppins', sans-serif;
-
+  text-shadow: 1px 1px 2px slategrey;
 }
 
-input,
-textarea {
-    width: 75%;
-    padding: 0.75rem;
-    border: 1px solid black;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
+.infoHeader>a:hover {
+  text-decoration: underline;
+  font-size: 19px;
+  transform: translate3d(0, -2px, 0);
 }
 
-.buttonBack{
+
+.bi {
+  font-size: 1.5rem;
+  color: black;
+  text-shadow: 1px 1px 2px slategrey;
+}
+
+iframe {
+  box-shadow: 2px 2px 5px black;
+  margin: 2rem;
+}
+
+.contact-a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  text-shadow: 1px 1px 2px slategrey;
+}
+
+.contact-a:hover {
+  text-decoration: underline;
+}
+
+
+.socials {
+  display: flex;
+  justify-content: space-between;
   width: 100px;
-  height: 40px;
+  font-size: 19px;
+}
+
+.fa {
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px slategrey;
+}
+
+.fa-youtube:hover {
+  text-decoration: none;
+  color: black;
+  text-shadow: 2px 2px 2px red;
+  transform: translate3d(0, -2px, 0);
+}
+
+.fa-instagram:hover {
+  text-decoration: none;
+  color: rgb(119, 0, 255);
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  transform: translate3d(0, -2px, 0);
+}
+
+.fa-twitter:hover {
+  text-decoration: none;
+  color: rgb(0, 110, 255);
+  text-shadow: 3px 3px 3px white;
+  transform: translate3d(0, -2px, 0);
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
+
+main>h2,
+.h1 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px slategrey;
+  margin: 1rem;
+}
+
+
+
+.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.index-a {
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px 2px slategrey;
+  font-size: 2rem;
+}
+
+.index-a:hover {
+  text-decoration: underline;
+
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 35%;
+  margin: 1rem;
+  box-shadow: 2px 2px 5px black;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #ded0a0;
+  padding: 1rem;
+}
+
+.card-idx {
+  width: 400px;
+  margin: 1rem;
+  box-shadow: 2px 2px 5px black;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  justify-content: space-between;
+  background: #ded0a0;
+  padding: 1rem;
+}
+
+.idx-bottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit-btn,
+.delete-btn {
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px 2px slategrey;
+  background-color: rgb(144, 165, 186);
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100px;
+  padding: 5px 10px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.edit-btn:hover,
+.delete-btn:hover,
+.submit-btn:hover {
+  cursor: pointer;
+  transform: translate3d(0, -2px, 0);
+  text-shadow: 2px 2px 2px slategrey;
+  box-shadow: 2px 2px 2px black;
+}
+
+.infoBottom-abv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.infoBottom-abv>p {
+  margin: 5px 0px;
+}
+
+.card-image {
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 200px;
+  box-shadow: 2px 2px 5px black;
+}
+
+img:hover {
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 2px 2px 2px black;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 400px;
+  text-align: left;
+}
+
+.cardHeader {
+  text-align: center;
+}
+
+.middleInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+
+.cardEdit {
+  display: flex;
+  flex-direction: column;
+  background-color: #ded0a0;
+  width: 600px;
+  padding: 20px;
+  margin: 1rem;
+  color: black;
+  font-size: 18px;
+  box-shadow: 0px 1px 10px black;
+}
+
+label {
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 2px slategrey;
+}
+
+.containerEdit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
   padding: 0.75rem;
   border: 1px solid black;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  background-color: lightgray;
 }
 
-.bottomEdit{
-  width: 600px;
-  display:flex;
-  justify-content: space-between; 
 
-}
 
-.bottomNew{
-  
-  display:flex;
-  justify-content: center; 
-
-}
-
-.bottomEdit *{
-  width: 40%;
+.submit-btn {
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px 2px slategrey;
+  background-color: rgb(144, 165, 186);
+  border-radius: 5px;
+  font-size: 16px;
+  width: 150px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  text-align: center;
+  border: 2px solid black;
+  cursor: pointer
 }
 
 :focus-visible {
-    outline: 1px solid black;
+  outline: 1px solid black;
 }
 
-.infoHeader {
+
+footer {
+  height: 50px;
+  width: 100%;
+  text-align: center;
   display: flex;
-  color: black;
-  font-size: 20px;
-  font-family: 'Poppins', sans-serif;
-  align-items: baseline;
-  justify-content: flex-start;
-  width: 300px;
-}
-
-.socials{
-  display: flex;
-  align-items: flex-end;
-  padding: 5px;
-  font-size: 20px;
-  /* width: 50px; */
-  /* justify-items: right; */
-}
-
-.fa-instagram{
-
-  padding: 5px;
-  color:#e98074;
-  
-}
-
-.fa-youtube{
-  padding: 5px;
-  font-size: 20px;
-  color:#e98074;
-}
-
-.fa-twitter{
-  padding: 5px;
-  font-size: 20px;
-  color:#e98074;
-}
-
-.footerDisplay{
-  font-family: 'Poppins', sans-serif;
-  padding: 10px;
-  margin: 10px;
-}
-
-.topHolder{
-  display: flex;
-  justify-content: space-between; 
-}
-
-label {
   justify-content: center;
+  align-items: center;
+  background-color: #ded0a0;
+  box-shadow: 2px 2px 5px black;
+}
+
+@media (max-width: 700px) {
+  header>h1 {
+    font-size: 2rem;
+  }
+
+  .topHolder {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

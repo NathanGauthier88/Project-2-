@@ -1,0 +1,39 @@
+<%- include('header') %>
+<div class="show">
+<div class="card">
+    <div class="card-image">
+      <h1 class="user"><%= review.user %> is having...</h1>
+        <a href="/reviews/<%= review._id %>">
+          <img src="<%= review.img %>" class="img-size img-border" alt="<%= review.name %>">
+        </a>
+    </div>
+    <div class="card-content">
+      <div class="cardHeader">
+        <h2 class="title"><%= review.name %></h2>
+      </div>
+      <div class="middleInfo">
+        <p>Location: <%= review.location %></p>
+        <p>Brewery: <%= review.brewery %></p>
+        <p>Style: <%= review.style %></p>
+      </div>
+      <div class="reviewText">
+        <p>Review: <%= review.reviewBody %></p>
+      </div>
+      <div class="infoBottom">
+        <div class="infoBottom-abv">
+          <p>ABV%: <%= review.abv %></p>
+          <p>Score: <%= review.score %></p>
+        </div>
+        <div class="idx-bottom">
+            <a class="edit-btn" href="/reviews">Back</a>
+            <a class="edit-btn" href="/reviews/<%= review._id %>/edit">Edit</a>
+            <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
+              <input class="delete-btn" type="submit" value="Delete">
+            </form>
+            
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('footer') %>
